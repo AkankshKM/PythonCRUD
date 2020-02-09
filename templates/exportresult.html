@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+   <head>
+      <title>"Export Result"</title>
+   </head>
+   <body>
+     <p>Records in database: {{totRec}}</p> 
+         
+     {%if status == 'Success' %}
+      Successfully exported
+     {%else%}
+      Errors in exporting file. <br /> 
+         Error: {{status}}<br />
+      See {{errorfile}} for duplicate primary key records (if any)
+     {% endif%} 
+   </body>
+</html>

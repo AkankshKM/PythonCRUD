@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+   <head>
+      <title>Update database from file</title>
+   </head>
+   <body>
+		{% include 'header.html' %}
+		<h2>Reports</h2>
+      <form action = "/importresult" method = "POST">
+	    <p>Input Form</p>
+	    <table>
+		  <tr>
+		    <td>Source Text File:</td><td><input type = "file" name = "txtfile" /></td>
+		  </tr>
+		  <tr>
+		    <td>Destination Database:</td><td><input type = "file" name = "dbfile" /></td>
+		  </tr>
+		</table>
+		<p><input type = "submit" value = "submit" /> <input type = "reset"></p>
+	  </form>
+		{% include 'footer.html' %}
+   </body>
+</html>

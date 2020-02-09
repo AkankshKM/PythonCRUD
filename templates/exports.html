@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+   <head>
+      <title>Export file from database</title>
+   </head>
+   {% include 'header.html'%}
+   <body>
+      <form action = "/exportresult" method = "POST">
+	    <table>
+			<p>Total number of records in the database: {{totrec}}</p>
+		  <tr>
+		    <td>File name:</td><td><input type = "export" name = "export" /></td>
+		  </tr>
+		</table>
+		<p><input type = "submit" value = "submit" /> <input type = "reset"></p>
+      </form>
+   </body>
+</html>
+

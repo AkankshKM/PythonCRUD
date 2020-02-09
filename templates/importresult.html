@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+   <head>
+      <title>"Customer Information Result"</title>
+   </head>
+   <body>
+      <table border = 1>
+         {% for key, value in customer.items() %}
+            <tr>
+               <th> {{ key }} </th>
+               <td> {{ value }} </td>
+            </tr>
+         {% endfor %}
+      </table>
+	  <p>
+	  {# This is a comment.  Recall that customer is a dictionary.
+	     Can use the key to view a specific item, for example see below: #}
+   </body>
+</html>

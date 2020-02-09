@@ -1,0 +1,23 @@
+<html>
+	<header>
+		<title>Message - Customer Sample Application</title>
+	<header>
+	<body>
+		{% include 'header.html' %}
+		<h2><b>{{ message }}</b></h2>
+
+
+		{% if customer is defined %}
+			<table border = 1>
+					<tr>
+						<td>ID</td><td>Name</td><td>Major</td><td>GPA</td>
+					</tr>
+					<tr>
+						<td>{{ customer['cusId'] }}</td><td>{{ customer['cusFname'] }}</td><td>{{ customer['cusLname'] }}</td><td>{{ customer['cusState'] }}</td><td>{{ customer['cusSalesYTD'] }}</td><td>{{ customer['cusSalesPrev'] }}</td>
+						<td><a href="/update/{{ customer['cusId'] }}">Edit</a> | <a href="/delete/{{ customer['cusId'] }}">Delete</a></td>
+					</tr>
+			</table>
+		{% endif %}
+		{% include 'footer.html' %}
+	<body>
+</html>
